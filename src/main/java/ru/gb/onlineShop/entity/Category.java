@@ -3,9 +3,9 @@ package ru.gb.onlineShop.entity;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.Collection;
+import java.util.List;
 //import javax.persistence.Table;
 
 @Entity
@@ -16,6 +16,9 @@ import javax.persistence.Id;
 public class Category {
     @Id
     @GeneratedValue
+    @Column(name = "category_id")
     private long id;
     private String name;
+    @ManyToMany(mappedBy = "categories")
+    private Collection<Product> products;
 }

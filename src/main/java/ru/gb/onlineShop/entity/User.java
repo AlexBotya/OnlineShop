@@ -11,6 +11,7 @@ import java.util.Collection;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "user_id")
     private long id;
 
     private String email;
@@ -23,8 +24,8 @@ public class User {
     @ManyToMany
     @JoinTable(
             name = "users_roles",
-            joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id"),
-            inverseJoinColumns = @JoinColumn(name = "role_id", referencedColumnName = "id")
+            joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "role_id"),
+            inverseJoinColumns = @JoinColumn(name = "role_id", referencedColumnName = "user_id")
     )
     private Collection<Role> roles;
 
