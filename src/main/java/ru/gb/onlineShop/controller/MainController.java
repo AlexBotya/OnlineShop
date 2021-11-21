@@ -1,3 +1,4 @@
+/*
 package ru.gb.onlineShop.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -61,4 +62,4 @@ public class MainController {
 
         return "redirect:/";
     }
-}
+}*/

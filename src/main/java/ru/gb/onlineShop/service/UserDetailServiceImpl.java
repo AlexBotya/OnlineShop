@@ -1,3 +1,4 @@
+/*
 package ru.gb.onlineShop.service;
 
 import lombok.AllArgsConstructor;
@@ -14,7 +15,7 @@ import ru.gb.onlineShop.repository.UserRepository;
 import java.util.Optional;
 
 @Service
-@AllArgsConstructor
+@Data
 public class UserDetailServiceImpl implements UserDetailsService {
 
     private final UserRepository userRepository;
@@ -35,3 +36,4 @@ public class UserDetailServiceImpl implements UserDetailsService {
         );
     }
 }
+*/
