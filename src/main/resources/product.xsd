@@ -3,7 +3,7 @@
            xmlns:tns="http://gb.ru/api/product"
            targetNamespace="http://gb.ru/api/product"
            elementFormDefault="qualified">
-                                (2)
+
     <xs:element name="getProductRequest">
         <xs:complexType  >
             <xs:sequence>
@@ -12,7 +12,7 @@
         </xs:complexType>
     </xs:element>
 
-                                (3)
+
     <xs:element name = "getProductResponse">
         <xs:complexType>
             <xs:sequence>
@@ -22,7 +22,7 @@
     </xs:element>
 
 
-    <xs:complexType name="product">                                     (1)
+    <xs:complexType name="product">
         <xs:sequence>
             <xs:element name="id" type="xs:long"/>
             <xs:element name="text" type="xs:string"/>
@@ -30,7 +30,7 @@
             <xs:element name="category" type="tns:category"/>
         </xs:sequence>
     </xs:complexType>
-    <xs:complexType name="category">                                     (1)
+    <xs:complexType name="category">
         <xs:sequence>
             <xs:element name="id" type="xs:long"/>
             <xs:element name="name" type="xs:string"/>
