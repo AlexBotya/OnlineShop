@@ -1,4 +1,4 @@
-/*
+
 package ru.gb.onlineShop.service;
 
 import lombok.AllArgsConstructor;
@@ -13,6 +13,7 @@ import ru.gb.onlineShop.repository.RoleRepository;
 import ru.gb.onlineShop.repository.UserRepository;
 
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 @Data
@@ -23,7 +24,7 @@ public class UserDetailServiceImpl implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String userName)  {
         Optional<User> mayBeUser = userRepository.findByEmail(userName);
-        if (mayBeUser.isEmpty()){
+        if (!mayBeUser.isPresent()){
             throw new UsernameNotFoundException("User not found by passed name: " + userName);
         }
         User user = mayBeUser.get();
@@ -32,8 +33,8 @@ public class UserDetailServiceImpl implements UserDetailsService {
                 user.getRoles()
                         .stream()
                         .map(role -> new SimpleGrantedAuthority(role.getName()))
-                        .toList()
+                        .collect(Collectors.toList())
         );
     }
 }
-*/
+
