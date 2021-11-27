@@ -1,0 +1,28 @@
+server:
+  servlet:
+    context-path: /online_shop/
+spring:
+  application:
+    name: gb-client-config
+  cloud:
+    config:
+      server:
+        git:
+          uri: file://C:/javaEE/OnlineShop/gbconfig
+  datasource:
+
+    url: jdbc:mysql://localhost:3306/online_shop
+    username: root
+    password:
+  jpa:
+
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  thymeleaf:
+    enabled: true
+    encoding: UTF-8
+    check-template-location: true
+    prefix: classpath:/templates/
+    suffix: .html
