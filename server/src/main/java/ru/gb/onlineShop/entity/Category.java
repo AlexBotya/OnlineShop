@@ -5,7 +5,6 @@ import lombok.experimental.FieldDefaults;
 
 import javax.persistence.*;
 import java.util.Collection;
-import java.util.List;
 //import javax.persistence.Table;
 
 @Entity

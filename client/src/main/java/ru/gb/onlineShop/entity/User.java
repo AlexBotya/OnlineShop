@@ -1,7 +1,6 @@
 package ru.gb.onlineShop.entity;
 
 import lombok.Data;
-import org.hibernate.annotations.ManyToAny;
 
 import javax.persistence.*;
 import java.util.Collection;
