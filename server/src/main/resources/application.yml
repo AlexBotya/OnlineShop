@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 8888
   servlet:
     context-path: /online_shop/
 spring:
@@ -25,3 +25,5 @@ spring:
     check-template-location: true
     prefix: classpath:/templates/
     suffix: .html
+  application:
+    name: gb-server-config
