@@ -1,12 +1,11 @@
 package ru.gb.onlineShop.entity;
 
-import lombok.*;
-import lombok.experimental.FieldDefaults;
 
+import lombok.AccessLevel;
+import lombok.Data;
+import lombok.experimental.FieldDefaults;
 import javax.persistence.*;
 import java.util.Collection;
-//import java.util.List;
-
 
 @Entity
 //@Table(name = "products")
@@ -28,4 +27,5 @@ public class Product {
             inverseJoinColumns = @JoinColumn(name = "role_id", referencedColumnName = "catrgory_id")
     )
     Collection<Category> categories;
-}
+    }
+

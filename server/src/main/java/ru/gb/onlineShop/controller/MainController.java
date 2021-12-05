@@ -1,16 +1,12 @@
-/*
+
 package ru.gb.onlineShop.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
 import ru.gb.onlineShop.entity.User;
 import ru.gb.onlineShop.service.UserDetailServiceImpl;
-
 import java.text.DateFormat;
 import java.util.Date;
 import java.util.Locale;
@@ -48,7 +44,7 @@ public class MainController {
         return "register";
     }
 
-    @PostMapping("/register")
+    /*@PostMapping("/register")
     public String registerPage(@Valid @ModelAttribute("userDto") User user, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             return "register";
@@ -60,6 +56,6 @@ public class MainController {
 
         userServiceImpl.create(user);
 
-        return "redirect:/";
+        return "redirect:/";*/
     }
-}*/
+

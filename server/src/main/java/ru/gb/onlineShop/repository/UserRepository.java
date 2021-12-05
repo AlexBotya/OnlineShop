@@ -11,7 +11,7 @@ import java.util.Optional;
 
 @Repository
 public interface UserRepository extends PagingAndSortingRepository<User, Long> {
-    public default Optional<User> findByEmail(String email){
+    default Optional<User> findByEmail(String email){
         EntityManagerFactory factory = new Configuration().configure()
                 .buildSessionFactory();
         EntityManager entityManager = factory.createEntityManager();
